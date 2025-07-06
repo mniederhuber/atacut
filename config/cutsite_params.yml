@@ -1,0 +1,18 @@
+# Cutsite Analysis Parameters (from cutsites.yaml)
+publish_mode: copy # 
+bams: '' ## path to bams
+znorm_script: src/zNorm.r
+macs2:
+  shift: -37
+  extsize: 75
+  keep_dup: all
+  model: false
+genomecov:
+  cut_site:
+    upstream: 37
+    downstream: 37
+  chromosomes_regex: "([1-9]|1[0-9]|X|Y)" 
+bigwig_avg:
+  bin_size: 10
+znorm_params: 
+  r_version: 4.4.0
