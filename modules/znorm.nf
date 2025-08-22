@@ -17,7 +17,6 @@ process ZNORM {
     def r_version = params.znorm_params?.r_version ?: "4.4.0"
     
     """
-    module load r/${r_version}
     Rscript --vanilla ${znorm_script} ${bw_file} ${bw_file.simpleName}-znorm.bw
     """
 } 

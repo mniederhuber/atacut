@@ -2,7 +2,7 @@
 outdir: 'cutsites'
 publish_mode: 'copy' # 
 bams: 'nfcore-output/bwa/merged_library/*.bam' ## path to bams
-znorm_script: 'atacut/src/zNorm.r'
+znorm_script: 'atacut/src/zNorm.R'
 chrom_sizes: 'genome/mm39_sizes.tsv'
 macs2:
   shift: -37
@@ -16,5 +16,6 @@ genomecov:
   chromosomes_regex: "([1-9]|1[0-9]|X|Y)" 
 bigwig_avg:
   bin_size: 10
+  rep_regex: "" ## TODO add regex for replicate pattern to group samples
 znorm_params: 
   r_version: '4.4.0'
