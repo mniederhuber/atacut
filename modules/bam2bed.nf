@@ -1,16 +1,15 @@
 
 
 process BAM2BED {
-    tag "${bam_file.baseName}"
     label "medium"
     
-    publishDir "${params.output_paths.cutsites}/bed", mode: params.publish_mode
+    publishDir "${params.outdir}/bed", mode: params.publish_mode
     
     input:
     path bam_file
     
     output:
-    path "${bam_file.baseName}.bed", emit: bed
+    path "${bam_file.baseName}.bed"
     
     script:
     """

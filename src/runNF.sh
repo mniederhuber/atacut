@@ -8,4 +8,4 @@ mkdir -p var/logs
 
 module load nextflow
 
-nextflow run src/nextflow/workflows/cutsite_analysis.nf -resume -params-file config/params.yaml -c config/nextflow.config
+nextflow run atacut/workflow/cutsite_analysis.nf -resume -params-file config/params.yaml -c config/nextflow.config

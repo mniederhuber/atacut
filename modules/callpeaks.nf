@@ -1,18 +1,17 @@
 
 
 process CALLPEAKS {
-    tag "${bed_file.simpleName}"
     label "large"
     
-    publishDir "${params.output_paths.cutsites}/peaks", mode: params.publish_mode
+    publishDir "${params.outdir}/peaks", mode: params.publish_mode
     
     input:
     path bed_file
     
     output:
-    path "${bed_file.simpleName}_peaks.narrowPeak", emit: peaks
-    path "${bed_file.simpleName}_peaks.xls", emit: peaks_xls
-    path "${bed_file.simpleName}_summits.bed", emit: summits
+    path "${bed_file.simpleName}_peaks.narrowPeak"
+    path "${bed_file.simpleName}_peaks.xls"
+    path "${bed_file.simpleName}_summits.bed"
     
     script:
     def shift = params.macs2.shift != null ? params.macs2.shift : -37

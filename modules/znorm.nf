@@ -1,10 +1,10 @@
 
 
 process ZNORM {
-    tag "${bw_file.simpleName}"
+
     label "large"
     
-    publishDir "${params.output_paths.cutsites}/bw", mode: params.publish_mode
+    publishDir "${params.outdir}/bw", mode: params.publish_mode
     
     input:
     path bw_file

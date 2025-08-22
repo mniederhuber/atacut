@@ -1,10 +1,8 @@
 
 
 process MAKEBWS {
-    tag "${bedgraph_file.simpleName}"
-    label "bgtobw"
     
-    publishDir "${params.output_paths.cutsites}/bw", mode: params.publish_mode
+    publishDir "${params.outdir}/bw", mode: params.publish_mode
     
     input:
     path bedgraph_file

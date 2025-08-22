@@ -1,10 +1,10 @@
 
 
 process GENOMECOV {
-    tag "${bed_file.simpleName}"
+
     label "large"
     
-    publishDir "${params.output_paths.cutsites}/bg", mode: params.publish_mode
+    publishDir "${params.outdir}/bg", mode: params.publish_mode
     
     input:
     path bed_file
